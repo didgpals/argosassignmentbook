@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family:"Noto Sans KR", sans-serif;
   color: var(--font-black);
   font-size: 1.6rem;
   font-weight: 400;
@@ -106,6 +106,7 @@ main.nt_status_block{
   top:8px;
   left:50%;
   transform:translate(-50%);
+  letter-spacing: -0.04px;
 }
 
 /* main */
@@ -1956,10 +1957,6 @@ width:100vw;
 .rec_box2 ul li img {
   float: right;
   padding-bottom: 20px;
-}
-
-body {
-  font-family: Arial, sans-serif;
 }
 
 @media(min-width:768px) {
