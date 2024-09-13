@@ -13,7 +13,7 @@ $(document).ready(function () {
   // 스크롤할 때 이벤트 감지
   $window.on('scroll', function () {
     var scrollPosition = $window.scrollTop();
-    var offset = 104; // 스크롤 위치 조정 (헤더나 상단 공간이 있을 경우)
+    var offset = 300; // 스크롤 위치 조정 (헤더나 상단 공간이 있을 경우)
 
     // 각 테이블 섹션의 위치를 확인하여 탭 활성화
     for (var section in sections) {
@@ -24,6 +24,20 @@ $(document).ready(function () {
         $tabs.eq(sections[section]).addClass("active");
       }
     }
+  });
+  document.querySelector('a[href="#physical"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const offset = 102; // 픽스된 헤더의 높이값 설정
+
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const targetRect = target.getBoundingClientRect().top;
+    const offsetPosition = targetRect - bodyRect - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   });
 
   // 첫 번째 탭에 기본적으로 active 클래스 추가
