@@ -1902,6 +1902,7 @@ height:24px;
 }
 
 
+
 /* record */
 #rec_wrap {
   height:100vh;
@@ -2329,7 +2330,7 @@ height:24px;
 }
 
 #phy_wrap .inner {
-  padding: 72px 20px;
+  padding: 22px 20px;
 }
 
 
@@ -2338,7 +2339,7 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
-  padding-bottom: 50px;
+  padding-top: 50px;
 }
 #physical {
   scroll-padding-top:100px;
@@ -2515,7 +2516,7 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
-  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 #communication tr:first-child th {
@@ -2593,7 +2594,7 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
-  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 #nursing tr:first-child th {
@@ -2672,6 +2673,8 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
+  padding-top:50px;
+  padding-bottom:50px; 
 }
 
 #recovery tr:first-child th {
@@ -2745,9 +2748,23 @@ height:24px;
 }
 
 /* claimDetails */
+#wrap #cla_wrap.tab_fixed{
+  padding-top:50px;
+}
+#wrap #dep_wrap.tab_fixed{
+  padding-top:50px;
+}
+.cla_tab{
+  position:fixed;
+  top:44px;
+  width:100%;
+  max-width:768px;
+}
 .cla_tab ul {
   display: flex;
   background: #fff;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--stroke-dd);
 }
 
 .cla_tab ul li {
@@ -2772,7 +2789,7 @@ height:24px;
 }
 
 .cla_tab ul li:last-child {
-  border-bottom: 2px solid var(--gray-99);
+  border-bottom: 2px solid var(--stroke-dd);
 }
 
 .cla_tab ul li:last-child a {
@@ -2892,9 +2909,11 @@ height:24px;
 }
 
 @media(min-width:768px) {
+  .cla_tab{
+    top:74px;
+  }
   .cla_tab ul {
     padding: 0 80px;
-    border-bottom: 1px solid var(--stroke-dd);
   }
 
   .cla_tab ul li:first-child {
@@ -2902,7 +2921,7 @@ height:24px;
   }
 
   .cla_tab ul li:last-child {
-    border-bottom: 4px solid var(--gray-99);
+    border-bottom: 4px solid var(--stroke-dd);
   }
 
   .cla_tab ul li a {
@@ -2913,7 +2932,7 @@ height:24px;
   }
 
   #cla_wrap .inner {
-    padding: 32px 80px;
+    padding: 102px 80px;
   }
 
   .cla_box h3 {
@@ -2962,11 +2981,46 @@ height:24px;
   .cla_txtbox>ul li:last-child p {
     font-size: 2.0rem;
   }
+ 
+  #physical{
+    padding-top:80px;
+  }
+  
+  #communication{
+    padding-top:80px;
+  }
+  
+  #nursing{
+    padding-top:80px;
+  }
+  
+  #recovery{
+    padding-top:80px;
+  }
+  #phy_wrap .inner {
+    padding:20px 20px;
+  }
+
+  #wrap #cla_wrap.tab_fixed{
+    padding-top:0px;
+  }
+  #wrap #dep_wrap.tab_fixed{
+    padding-top:65px;
+  }
 }
 
 /* depositDetails */
+.dep_tab{
+  position:fixed;
+  top:44px;
+  width:100%;
+  max-width:768px;
+  background: #fff;
+}
 .dep_tab ul {
+  padding: 0 20px;
   display: flex;
+  border-bottom: 1px solid var(--stroke-dd);
 }
 
 .dep_tab ul li {
@@ -2976,7 +3030,7 @@ height:24px;
 }
 
 .dep_tab ul li:first-child {
-  border-bottom: 2px solid var(--gray-99);
+  border-bottom: 2px solid var(--stroke-dd);
 }
 
 .dep_tab ul li a {
@@ -3065,6 +3119,7 @@ height:24px;
 
 .inner_two {
   padding: 20px;
+  padding-bottom:80px;
 }
 
 .dep_txtbox {
@@ -3180,13 +3235,16 @@ height:24px;
 }
 
 @media(min-width:768px) {
+  .dep_tab{
+    top:74px;
+
+  }
   .dep_tab ul {
     padding: 0 80px;
-    border-bottom: 1px solid var(--stroke-dd);
   }
 
   .dep_tab ul li:first-child {
-    border-bottom: 4px solid var(--gray-99);
+    border-bottom: 4px solid var(--stroke-dd);
   }
 
   .dep_tab ul li:last-child {
@@ -3233,7 +3291,7 @@ height:24px;
   }
 
   .inner_two {
-    padding: 32px 80px;
+    padding: 32px 80px 70px;
   }
 
   .dep_txtbox {

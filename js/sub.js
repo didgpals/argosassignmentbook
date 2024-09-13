@@ -25,20 +25,6 @@ $(document).ready(function () {
       }
     }
   });
-  document.querySelector('a[href^="#physical"]').addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    const offset = 102; // 픽스된 헤더의 높이값 설정
-
-    const bodyRect = document.body.getBoundingClientRect().top;
-    const targetRect = target.getBoundingClientRect().top;
-    const offsetPosition = targetRect - bodyRect - offset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  });
 
   // 첫 번째 탭에 기본적으로 active 클래스 추가
   $tabs.eq(0).addClass("active");
@@ -59,46 +45,35 @@ $(document).ready(function () {
     $(this).parent().addClass("active");
   });
 
-  $('.cla_down').click(function () {
-    $('.cla_depth2').slideToggle(300);
+  $('.cla_txtbox').click(function () {
+    $(this).find('.cla_depth2').slideToggle(300);
 
-    $(this).toggleClass('cla_rotate');
+    $(this).find(".cla_down").toggleClass('cla_rotate');
   });
 
-  $('.cla_down2').click(function () {
-    $('.cla_depth2_center').slideToggle(300);
 
-    $(this).toggleClass('cla_rotate');
-  });
-
-  $('.cla_down3').click(function () {
-    $('.cla_depth2_last').slideToggle(300);
-
-    $(this).toggleClass('cla_rotate');
-  });
-
-  $('.dep_cla_down1').click(function () {
+  $('.dep_txtbox.one').click(function () {
     $('.dep_depth2_one').slideToggle(300);
 
-    $(this).toggleClass('cla_rotate');
+    $("dep_cla_down1").toggleClass('cla_rotate');
   });
 
-  $('.dep_cla_down2').click(function () {
+  $('.dep_txtbox.two').click(function () {
     $('.dep_depth2_two').slideToggle(300);
 
-    $(this).toggleClass('cla_rotate');
+    $("dep_cla_down2").toggleClass('cla_rotate');
   });
 
-  $('.dep_cla_down3').click(function () {
+  $('.dep_txtbox.three').click(function () {
     $('.dep_depth2_three').slideToggle(300);
 
-    $(this).toggleClass('cla_rotate');
+    $("dep_cla_down3").toggleClass('cla_rotate');
   });
 
-  $('.dep_cla_down4').click(function () {
+  $('.dep_txtbox.four').click(function () {
     $('.dep_depth2_four').slideToggle(300);
 
-    $(this).toggleClass('cla_rotate');
+    $("dep_cla_down4").toggleClass('cla_rotate');
   });
 
   // 현재 년도를 가져오기 위한 h3 요소
