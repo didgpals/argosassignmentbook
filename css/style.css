@@ -2343,9 +2343,6 @@ height:24px;
   border-spacing: 0;
   padding-top: 50px;
 }
-#physical {
-  scroll-padding-top:100px;
-}
 
 #physical tr:first-child th {
   padding: 10px 0;
