@@ -52,10 +52,11 @@ $(document).ready(function () {
   });
 
 
-  $('.dep_txtbox.one').click(function () {
-    $('.dep_depth2_one').slideToggle(300);
-
+  $('.dep_txtbox').click(function () {
+    $(this).find('.dep_depth2_one').slideToggle(300);
     $("dep_cla_down1").toggleClass('cla_rotate');
+
+    $(this).find('.dep_depth2_two').slideToggle(300);
   });
 
   $('.dep_txtbox.two').click(function () {
