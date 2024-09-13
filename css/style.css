@@ -44,6 +44,7 @@ button{
 #wrap {
   max-width:768px;
   margin: 0 auto;
+  position:relative;
 }
 #wrap.none{
   overflow:hidden;
@@ -1517,6 +1518,12 @@ color:var(--font-black);
   font-weight:500;
   font-size:1.8rem;
 }
+@media (min-width:768px){
+  
+.version p{
+  margin-top:450px;
+}
+}
 
 /* logout */
 .btn_overlay_dimmd .overlay_modal.modal_logout{
@@ -1548,6 +1555,7 @@ color:var(--font-black);
   font-size:1.6rem;
   font-weight:600;
   letter-spacing:-0.3px;
+  height:48px;
 }
 .notice_tab_bar button.active {
   border-color:var(--main-color);
@@ -1820,6 +1828,7 @@ width:100vw;
     height:290px;
   }
   .notice_tab_bar button{
+    height:64px;
     font-size:2rem;
   }
   .notice_tab_bar{
@@ -1889,7 +1898,7 @@ height:24px;
 }
 
 .inner {
-  padding: 0 20px;
+  padding:20px;
   margin: 20px auto;
 }
 
@@ -2331,7 +2340,7 @@ height:24px;
   border-spacing: 0;
   margin-bottom: 50px;
 }
-#physical{
+#physical {
   scroll-margin-top:500px;
 }
 
@@ -2749,7 +2758,7 @@ height:24px;
 
 .cla_tab ul li a {
   display: block;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-bottom: 18px;
   height:48px;
 }
@@ -2774,6 +2783,7 @@ height:24px;
   height:100vh;
   background: var(--bg-f1);
   padding: 20px;
+  margin:0;
 }
 
 .cla_box h3 {
@@ -2897,8 +2907,9 @@ height:24px;
 
   .cla_tab ul li a {
     font-size: 2.0rem;
-    padding-top: 22px;
+    padding-top:16px;
     padding-bottom: 26px;
+    height:63px;
   }
 
   #cla_wrap .inner {
@@ -2970,8 +2981,9 @@ height:24px;
 
 .dep_tab ul li a {
   display: block;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-bottom: 18px;
+  height:48px;
 }
 
 .dep_tab ul li:first-child a {
@@ -2993,6 +3005,7 @@ height:24px;
 #dep_wrap .inner {
   background: var(--bg-f1);
   padding: 20px;
+  margin:0;
 }
 
 .dep_box {
@@ -3181,7 +3194,7 @@ height:24px;
   }
 
   .dep_tab ul li a {
-    padding-top: 18px;
+    padding-top: 16px;
     padding-bottom: 26px;
     font-size: 2.0rem;
     height:63px;
