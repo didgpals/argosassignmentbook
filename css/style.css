@@ -37,6 +37,9 @@ span{
 h1,h2,h3,h4{
   letter-spacing:-0.4px;
 }
+button{
+  font-family:"Noto Sans KR", sans-serif;
+}
 /* Wrap */
 #wrap {
   max-width:768px;
@@ -157,6 +160,62 @@ main.nt_status_block{
   background: #f5f5f5;
 }
 
+#main .sms_list {
+  margin: 0 20px;
+}
+.sms_list li {
+  padding: 16px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--stroke-ee);
+}
+
+.sms_list li a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sms_list .sms_icon {
+  font-size: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  background-color: var(--bg-f5);
+  background-image: url(../img/seulki_img/ico_sms.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  flex-shrink: 0s;
+}
+.sms_icon{
+  flex-shrink:0;
+}
+.sms_tit {
+  width:70%;
+  margin:0 auto 0 0;
+}
+.sms_list li a img {
+  float: right;
+  width: 8px;
+  height: 12px;
+}
+.sms_tit .sms_date {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--gray-66);
+}
+.sms_tit h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.sms_tit h2 + p {
+  font-size: 1.3rem;
+  color: var(--gray-66);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
 .sms_container {
   background-color: var(--bg-f1);
   padding: 20px;
@@ -856,7 +915,7 @@ main.nt_status_block{
   font-size: 1.8rem;
   color: var(--gray-99);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .main .info_box {
@@ -864,8 +923,8 @@ main.nt_status_block{
   justify-content: space-between;
   background: #fff;
   width: 100%;
-  height: 130px;
-  padding: 20px 18px;
+  height: 140px;
+  padding: 24px 18px;
   margin-bottom: 16px;
   border-radius: 12px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -899,6 +958,10 @@ main.nt_status_block{
   margin-left: 6px;
 }
 
+.main .birth_box{
+  margin-top:-8px;
+}
+
 .main .birth {
   font-size: 1rem;
   font-size: 500;
@@ -907,7 +970,7 @@ main.nt_status_block{
   display: inline-block;
   border-radius: 100px;
   margin-right: 4px;
-  margin-top:-6px;
+  margin-top:-14px;
 }
 
 .main .birth_num {
@@ -925,7 +988,7 @@ main.nt_status_block{
 
 .main ul li {
   width: calc((100% - 16px) / 2);
-  height: 130px;
+  height: 140px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   background: #fff;
   border-radius: 12px;
@@ -1016,6 +1079,9 @@ main.nt_status_block{
 @media (min-width: 768px) {
   .main {
     padding: 20px 80px 20px;
+  }
+  .main .birth_box{
+    margin-top:0px;
   }
 
   .main .info_box {
@@ -1233,9 +1299,9 @@ main.nt_status_block{
   border:1px solid var(--stroke-dd);
 }
 #main .mypage  .mypage_profile .mypage_profile_img{
-  width:116px;
-  height:116px;
-  background: url(../img/mypage/img_profile_m.jpg) no-repeat center;
+  width:110px;
+  height:110px;
+  background: url(../img/mypage/img_profile_m.jpg) no-repeat center / cover;
   border-radius:50%;
 }
 #main .mypage  .mypage_profile .camera{
@@ -1382,7 +1448,7 @@ color:var(--font-black);
 .btn_box{
   display:flex;
   gap:8px;
-  margin-top:40px;
+  padding-top:28px;
 }
 .btn{
   width:calc((100% - 8px) / 2);
@@ -1437,10 +1503,11 @@ color:var(--font-black);
 }
 .password .btn_box{
   gap:16px;
-  margin-bottom:50px;
+  padding:30px 0 30px;
+  font-size:1.8rem;
 }
 .password .modal_changing_password{
- height:173px;
+ height:163px;
 }
 
 /* version */
@@ -1452,9 +1519,11 @@ color:var(--font-black);
 }
 
 /* logout */
-
+.btn_overlay_dimmd .overlay_modal.modal_logout{
+  height:229px;
+}
 .modal_logout h2{
-  margin-bottom:32px;
+  padding-bottom:32px;
   font-size:3rem;
 }
 
@@ -1641,6 +1710,9 @@ width:100vw;
 
 
 @media(min-width:768px){
+  .btn{
+    font-size:2.8rem;
+  }
   #main .mypage{
    padding:0 80px;
   }
@@ -1649,8 +1721,8 @@ width:100vw;
     height:200px;
   }
   #main .mypage .mypage_profile .mypage_picture .mypage_profile_img{
-    width:180px;
-    height:180px;
+    width:178px;
+    height:178px;
     background: url(../img/mypage/img_profile_t.jpg)no-repeat center;
   }
   #main .mypage .mypage_profile .camera{
@@ -1737,6 +1809,10 @@ width:100vw;
   .password  .modal_changing_password{
     height:210px;
   }
+
+  .password .btn_box{
+    padding-top:36px;
+  }
   .version p{
   font-size:2.4rem;
   }
@@ -1799,12 +1875,24 @@ width:100vw;
   object-fit: cover;
   margin-top:5px;
 }
+.btn_overlay_dimmd .btn_overlay .btn_title h2{
+  font-size:2.2rem;
+}
+.btn_overlay_dimmd .btn_overlay .btn_list li button{
+  font-size:2rem;
+}
+.modal_close{
+  margin-top:6px;
+  width:24px;
+height:24px;
+}
 }
 
 .inner {
-  padding: 20px;
-  margin: 0 auto;
+  padding: 0 20px;
+  margin: 20px auto;
 }
+
 
 /* record */
 #rec_wrap {
@@ -2186,10 +2274,11 @@ width:100vw;
 }
 
 /* physical */
+
 .phy_tab {
   border-bottom: 1px solid var(--stroke-dd);
-  position: fixed;
-  top:43px;
+  position: fixed; 
+  top:44px; 
   width: 100%;
   max-width:768px;
   background: #fff;
@@ -2242,6 +2331,9 @@ width:100vw;
   border-spacing: 0;
   margin-bottom: 50px;
 }
+#physical{
+  scroll-margin-top:500px;
+}
 
 #physical tr:first-child th {
   padding: 10px 0;
@@ -2291,7 +2383,7 @@ width:100vw;
 }
 
 #physical th {
-  padding: 16px 6px;
+  padding: 16px 8px;
   width: calc((100%) / 3);
   white-space: pre-line;
   word-break: keep-all;
@@ -2325,7 +2417,9 @@ width:100vw;
   #phy_wrap .inner {
     padding: 90px 80px 60px;
   }
-
+  .phy_tab{
+    top:74px;
+  }
   .phy_tab ul {
     padding: 0 80px;
   }
@@ -2645,7 +2739,6 @@ width:100vw;
 .cla_tab ul {
   display: flex;
   background: #fff;
-  
 }
 
 .cla_tab ul li {
@@ -2658,6 +2751,7 @@ width:100vw;
   display: block;
   padding-top: 14px;
   padding-bottom: 18px;
+  height:48px;
 }
 
 .cla_tab ul li:first-child {
@@ -3087,9 +3181,10 @@ width:100vw;
   }
 
   .dep_tab ul li a {
-    padding-top: 22px;
+    padding-top: 18px;
     padding-bottom: 26px;
     font-size: 2.0rem;
+    height:63px;
   }
 
   #dep_wrap .inner {
@@ -3397,6 +3492,9 @@ width:100vw;
   display: none;
   z-index: 103;
 }
+.dep_filter ul li img{
+  cursor:pointer;
+}
 
 @media(min-width:768px) {
   .dep_filter {
@@ -3537,7 +3635,7 @@ width:100vw;
   object-fit: cover;
 }
 #activity_log .act_list h3{
-  padding: 6px 0 4px 0;
+  padding: 6px 0 0;
   font-size: 1.6rem;
   color: var(--font-black);
   letter-spacing: -0.3px;
@@ -3578,7 +3676,7 @@ width:100vw;
     border-radius: 12px;
   }
   #activity_log .act_list h3{
-    padding: 6px 0 8px 0;
+    padding: 6px 0 4px 0;
     font-size: 2rem;
     letter-spacing: -0.3px;
   }
@@ -3782,7 +3880,7 @@ width:100vw;
 .image_back{
   position: absolute;
   left: 20px;
-  top: 38px;
+  top: 14px;
 }
 #main .image_back img{
   width: 16px;
@@ -3803,15 +3901,23 @@ width:100vw;
 }
 #main .picture_pagination{
   text-align:center;
-  margin: 32px 0 0;
+  margin: 8px 0 0;
   color: #fff;
   font-size: 1.8rem;
   bottom:auto;
   top:0;
 }
+.picture_pagination_onlyone{
+  position:absolute;
+  top:12px;
+  left:50%;
+  transform: translateX(-50%);
+  color:#fff;
+  font-size:1.8rem;
+}
 .act_btnselect{
   position: absolute;
-  bottom: 68px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   padding: 0 20px;
@@ -3858,7 +3964,7 @@ width:100vw;
   z-index: 7;
   position: absolute;
   right: 0;
-  bottom: 138px;
+  bottom: 90px;
 }
 #main .download_btns button{
   margin-right: 20px;
@@ -3886,7 +3992,7 @@ width:100vw;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 166px;
+  bottom: 118px;
   width: 174px;
   padding: 8px 0 10px;
   background: #fff;  
@@ -3979,7 +4085,7 @@ width:100vw;
 }
 /* sns_app */
 #main .sns_app{
-  padding: 20px 0 68px;
+  padding: 20px 0 20px;
   background: #fff;
   border-bottom: 1px solid var(--stroke-ee);
 }
@@ -4021,7 +4127,7 @@ width:100vw;
   .image_back{
     position: absolute;
     left: 80px;
-    top: 49px;
+    top: 25px;
     cursor: pointer;
   }
   #main .image_back img{
@@ -4030,14 +4136,17 @@ width:100vw;
   }
   #main .picture_pagination{
     font-size: 2.4rem;
-    margin: 44px 0 0;
+    margin: 16px 0 0;
     letter-spacing: -0.3px;
+  }
+  .picture_pagination_onlyone{
+    font-size:2.1rem;
   }
   .act_btnselect{
     bottom: 40px;
     padding: 0 80px;
     gap: 16px;
-    bottom: 88px;
+    bottom: 40px;
   }
   .act_btnselect button{
     height: 76px;
@@ -4063,7 +4172,7 @@ width:100vw;
 
   /* download_btns */
   #main .download_btns{
-  bottom: 194px;
+  bottom: 146px;
   }
   #main .download_btns button{
     margin-right: 80px;
@@ -4084,7 +4193,7 @@ width:100vw;
   #main .download_popup{
     width: 257px;
     padding: 12px 0 14px;
-    bottom: 200px;
+    bottom: 152px;
   }
   #main .download_popup p{
     font-size: 1.5rem;
@@ -4117,6 +4226,6 @@ width:100vw;
     padding: 28px 0;
   }
   #main .sns_app{
-    padding: 28px 0 76px;
+    padding: 28px 0 28px;
   }
 }

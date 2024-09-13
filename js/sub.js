@@ -13,7 +13,7 @@ $(document).ready(function () {
   // 스크롤할 때 이벤트 감지
   $window.on('scroll', function () {
     var scrollPosition = $window.scrollTop();
-    var offset = 300; // 스크롤 위치 조정 (헤더나 상단 공간이 있을 경우)
+    var offset = 104; // 스크롤 위치 조정 (헤더나 상단 공간이 있을 경우)
 
     // 각 테이블 섹션의 위치를 확인하여 탭 활성화
     for (var section in sections) {
