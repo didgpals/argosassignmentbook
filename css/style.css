@@ -1452,9 +1452,7 @@ color:var(--font-black);
 }
 
 /* logout */
-.btn_overlay_dimmd .overlay_modal.modal_logout{
-  height:249px;
-}
+
 .modal_logout h2{
   margin-bottom:32px;
   font-size:3rem;
