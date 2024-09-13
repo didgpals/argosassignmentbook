@@ -15,11 +15,10 @@ $(document).ready(function () {
     // 카메라 모달창 딤드 및 접근권한
     $(".camera").click(function () {
         $(".btn_overlay_dimmd").show();
-        $(".dimmd").css({ height: "calc(100% - 48px)" })
         $(".btn_overlay").css({ bottom: "-100%" });
 
         $(".btn_overlay").show();
-        $(".btn_overlay").css({ bottom: 48 });
+        $(".btn_overlay").css({ bottom: 0 });
         $(".modal_camera").hide();
         $(".modal_gallery").hide();
         $(".modal_logout").hide();

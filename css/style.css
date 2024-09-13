@@ -1634,7 +1634,7 @@ letter-spacing: -0.2px;
   top:0;
   left:50%;
   transform:translate(-50%);
-  z-index:2;
+  z-index:4;
 }
 .phone_gallery img{
 height:100vh;
@@ -1704,6 +1704,7 @@ width:100vw;
   .btn_overlay_dimmd .overlay_modal{
     width:550px;
     height:277px;
+    padding:36px 32px 32px;
     border-radius: 32px;
   }
   .btn_overlay_dimmd .overlay_modal .modal_txt p {
