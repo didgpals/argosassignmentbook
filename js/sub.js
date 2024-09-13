@@ -25,7 +25,7 @@ $(document).ready(function () {
       }
     }
   });
-  document.querySelector('a[href="#physical"]').addEventListener('click', function (e) {
+  document.querySelector('a[href^="#physical"]').addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     const offset = 102; // 픽스된 헤더의 높이값 설정

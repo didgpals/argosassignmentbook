@@ -2338,10 +2338,10 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 #physical {
-  scroll-margin-top:500px;
+  scroll-padding-top:100px;
 }
 
 #physical tr:first-child th {
@@ -2515,7 +2515,7 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 #communication tr:first-child th {
@@ -2593,7 +2593,7 @@ height:24px;
   border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 #nursing tr:first-child th {
