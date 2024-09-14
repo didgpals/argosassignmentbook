@@ -1051,6 +1051,7 @@ main.nt_status_block{
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   background: #fff;
   border-radius: 12px;
+  margin-bottom:30px;
   padding: 16px;
   display: flex;
   align-items: center;
@@ -1566,30 +1567,30 @@ color:var(--font-black);
   padding-top:43px;
   margin:0 20px 0;
 }
-.notice_list li{
+.notice_list > li:not(:last-child){
   border-bottom:1px solid var(--stroke-dd);
 }
-.notice_list li:last-child{
+.notice_list > li:last-child{
   border:0;
 }
-.notice_list li a {
-  padding:20px 0;
+.notice_list > li:not(:last-child)  a {
+  margin:20px 0;
   display:flex;
   gap:12px;
   justify-content: space-between;
   height:150px;
 }
-.notice_list li a h3{
+.notice_list > li:not(:last-child) a h3{
   font-size:1.8rem;
   font-weight:500;
   letter-spacing:-0.4px;
 }
-.notice_list li a .listBox_textBox{
+.notice_list > li:not(:last-child) a .listBox_textBox{
   display:flex;
   flex-direction:column;
   justify-content: space-between;
 }
-.notice_list li a .listBox_textBox > p {
+.notice_list > li:not(:last-child) a .listBox_textBox > p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1604,30 +1605,58 @@ margin:12px 0;
   letter-spacing:-0.2px;
 }
 
-.notice_list li a .listBox_under{
+.notice_list > li:not(:last-child) a .listBox_under{
   display:flex;
   height:20px;
   gap:8px;
   align-items: center;
 }
-.notice_list li a .listBox_under span{
+.notice_list > li:not(:last-child) a .listBox_under span{
   font-size:1.4rem;
   color:var(--gray-66);
   letter-spacing:-0.3px;
 }
-.notice_list li a .listBox_under .add_file{
+.notice_list > li:not(:last-child) a .listBox_under .add_file{
   display:flex;
   gap:8px;
   background: var(--stroke-ee);
   padding:2px 8px;
   border-radius:4px;
 }
-.notice_list li a .listBox_under .add_file span{
+.notice_list > li:not(:last-child) a .listBox_under .add_file span{
   font-size:1.2rem;
 }
-.notice_list li a li a .listBox_imgBox {
+.notice_list > li:not(:last-child)  a li a .listBox_imgBox {
   border-radius:8px;
-  overflow:hidden;
+}
+.notice_pagination{
+  height:auto;
+  padding:20px 0;
+}
+.notice_pagination ul{
+  display:flex;
+  justify-content: center;
+  gap:12px;
+}
+.btn_pagination{
+  display:block;
+  width:30px;
+  height:30px;
+  background-color:#f5f5f5;
+  padding:2px 6px 4px;
+  text-align:center;
+  font-weight: 600;
+  border-radius:4px;
+}
+.btn_pagination.active{
+  background-color:var(--main-color);
+  color:white;
+}
+.notice_pagination li:nth-of-type(1) .btn_pagination{
+  background:#f5f5f5 url(../img/common/ico_prev.svg)no-repeat center / 8px;
+}
+.notice_pagination li:last-child .btn_pagination{
+  background:#f5f5f5 url(../img/common/ico_next.svg)no-repeat center / 8px;
 }
 
 /* notice_newsletter */
@@ -1691,6 +1720,7 @@ margin:12px 0;
 font-size:1.4rem;
 letter-spacing: -0.2px;
 }
+
 
 .phone_camera {
     display:none;
@@ -1843,16 +1873,16 @@ width:100vw;
   .notice_list_box{
   margin:0 80px 0;
   }
-  .notice_list_box .notice_list li a{
+  .notice_list_box .notice_list > li > a{
     height:168px;
   }
-  .notice_list_box .notice_list li a .listBox_textBox h3{
+  .notice_list_box .notice_list > li > a .listBox_textBox h3{
     font-size:2.4rem;
   }
-  .notice_list_box .notice_list li a .listBox_textBox h3 + p{
+  .notice_list_box .notice_list > li > a .listBox_textBox h3 + p{
     font-size:1.6rem;
   }
-  .notice_list_box .notice_list li a .listBox_textBox .listBox_under > span{
+  .notice_list_box .notice_list > li > a .listBox_textBox .listBox_under > span{
     font-size:1.6rem;
   }
   .notice_newsletter{
@@ -1885,6 +1915,25 @@ width:100vw;
   height:60%;
   object-fit: cover;
   margin-top:5px;
+}
+.notice_pagination ul{
+  gap:28px;
+}
+.btn_pagination{
+  width:48px;
+  height:48px;
+  padding:6px 6px 4px;
+  font-size:2.2rem;
+}
+.btn_pagination.active{
+  background-color:var(--main-color);
+  color:white;
+}
+.notice_pagination li:nth-of-type(1) .btn_pagination{
+  background:#f5f5f5 url(../img/notice/ico_pagination_prev.svg)no-repeat center / 14px;
+}
+.notice_pagination li:last-child .btn_pagination{
+  background:#f5f5f5 url(../img/notice/ico_pagination_next.svg)no-repeat center / 14px;
 }
 .btn_overlay_dimmd .btn_overlay .btn_title h2{
   font-size:2.2rem;
@@ -2332,7 +2381,7 @@ height:24px;
 }
 
 #phy_wrap .inner {
-  padding: 22px 20px;
+  padding: 22px 20px 32px;
 }
 
 
@@ -2423,8 +2472,8 @@ height:24px;
 }
 
 @media(min-width:768px) {
-  #phy_wrap .inner {
-    padding: 90px 80px 60px;
+  #wrap #phy_wrap .inner {
+    padding: 20px 80px 60px;
   }
   .phy_tab{
     top:74px;
@@ -2755,6 +2804,7 @@ height:24px;
 }
 .cla_tab{
   position:fixed;
+  z-index:2;
   top:44px;
   width:100%;
   max-width:768px;
@@ -2796,9 +2846,8 @@ height:24px;
 }
 
 #cla_wrap .inner {
-  height:100vh;
   background: var(--bg-f1);
-  padding: 20px;
+  padding: 20px 20px 80px;
   margin:0;
 }
 
@@ -3011,6 +3060,7 @@ height:24px;
 /* depositDetails */
 .dep_tab{
   position:fixed;
+  z-index:2;
   top:44px;
   width:100%;
   max-width:768px;
@@ -3290,7 +3340,7 @@ height:24px;
   }
 
   .inner_two {
-    padding: 32px 80px 70px;
+    padding: 32px 80px 80px;
   }
 
   .dep_txtbox {
@@ -3660,7 +3710,7 @@ height:24px;
   }
 
   #depHis_wrap .inner_two {
-    padding: 32px 80px;
+    padding: 32px 80px 80px;
   }
 
   .hisTotal {
@@ -4266,7 +4316,7 @@ height:24px;
     bottom: 152px;
   }
   #main .download_popup p{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     letter-spacing: -0.3px;
   }
 

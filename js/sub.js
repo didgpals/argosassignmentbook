@@ -53,28 +53,10 @@ $(document).ready(function () {
 
 
   $('.dep_txtbox').click(function () {
-    $(this).find('.dep_depth2_one').slideToggle(300);
-    $("dep_cla_down1").toggleClass('cla_rotate');
+    $(this).find('.dep_depth2').slideToggle(300);
+    $(this).find(".dep_cla_down").toggleClass('cla_rotate');
 
     $(this).find('.dep_depth2_two').slideToggle(300);
-  });
-
-  $('.dep_txtbox.two').click(function () {
-    $('.dep_depth2_two').slideToggle(300);
-
-    $("dep_cla_down2").toggleClass('cla_rotate');
-  });
-
-  $('.dep_txtbox.three').click(function () {
-    $('.dep_depth2_three').slideToggle(300);
-
-    $("dep_cla_down3").toggleClass('cla_rotate');
-  });
-
-  $('.dep_txtbox.four').click(function () {
-    $('.dep_depth2_four').slideToggle(300);
-
-    $("dep_cla_down4").toggleClass('cla_rotate');
   });
 
   // 현재 년도를 가져오기 위한 h3 요소
