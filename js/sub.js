@@ -10,6 +10,11 @@ $(document).ready(function () {
   var $tabs = $(".phy_tab ul li");
   var $window = $(window);
 
+  // URL에 #해시코드가 있을 경우에만 스크롤 높이를 조정
+  if (location.hash) {
+    scrollTo(0, window.scrollY - 80);
+  }
+
   // 스크롤할 때 이벤트 감지
   $window.on('scroll', function () {
     var scrollPosition = $window.scrollTop();
