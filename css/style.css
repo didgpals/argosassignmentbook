@@ -4310,8 +4310,8 @@ height:24px;
 
   /* download_popup */
   #main .download_popup{
-    width: 257px;
-    padding: 12px 0 14px;
+    width: 284px;
+    padding: 12px 14px;
     bottom: 152px;
   }
   #main .download_popup p{
