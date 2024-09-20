@@ -52,16 +52,17 @@ $(document).ready(function () {
 
   $('.cla_txtbox').click(function () {
     $(this).find('.cla_depth2').slideToggle(300);
-
     $(this).find(".cla_down").toggleClass('cla_rotate');
+    $(this).siblings().find(".cla_depth2").slideUp();
+    $(this).siblings().find(".cla_down").removeClass('cla_rotate');
   });
 
 
   $('.dep_txtbox').click(function () {
     $(this).find('.dep_depth2').slideToggle(300);
     $(this).find(".dep_cla_down").toggleClass('cla_rotate');
-
-    $(this).find('.dep_depth2_two').slideToggle(300);
+    $(this).siblings().find(".dep_depth2").slideUp();
+    $(this).siblings().find('.dep_cla_down').removeClass('cla_rotate')
   });
 
   // 현재 년도를 가져오기 위한 h3 요소
