@@ -3390,35 +3390,11 @@ height:24px;
     padding-left: 16px;
   }
 
-  .dep_txtbox .dep_depth2_one li span {
+  .dep_txtbox .dep_depth2 li span {
     font-size: 2.2rem;
   }
 
-  .dep_txtbox .dep_depth2_one li b {
-    font-size: 2.2rem;
-  }
-
-  .dep_txtbox .dep_depth2_two li span {
-    font-size: 2.2rem;
-  }
-
-  .dep_txtbox .dep_depth2_two li b {
-    font-size: 2.2rem;
-  }
-
-  .dep_txtbox .dep_depth2_three li span {
-    font-size: 2.2rem;
-  }
-
-  .dep_txtbox .dep_depth2_three li b {
-    font-size: 2.2rem;
-  }
-
-  .dep_txtbox .dep_depth2_four li span {
-    font-size: 2.2rem;
-  }
-
-  .dep_txtbox .dep_depth2_four li b {
+  .dep_txtbox .dep_depth2 li b {
     font-size: 2.2rem;
   }
 }
