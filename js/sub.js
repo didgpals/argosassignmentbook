@@ -51,9 +51,9 @@ $(document).ready(function () {
   });
 
   $('.cla_txtbox').click(function () {
-    $(this).find('.cla_depth2').slideToggle(300);
+    $(this).find('>li:last-child').slideToggle(300);
     $(this).find(".cla_down").toggleClass('cla_rotate');
-    $(this).siblings().find(".cla_depth2").slideUp();
+    $(this).siblings().find(">li:last-child").slideUp();
     $(this).siblings().find(".cla_down").removeClass('cla_rotate');
   });
 
