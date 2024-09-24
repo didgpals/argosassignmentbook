@@ -1730,10 +1730,16 @@ letter-spacing: -0.2px;
     left:50%;
     transform:translate(-50%);
     z-index:4;
+    width:100%;
+    height:100vh;
+    background: #000;
 }
 .phone_camera img{
+  position:absolute;
   height:100vh;
-  width:100vw;
+  left:50%;
+  transform: translateX(-50%);
+
 }
 .phone_gallery {
   display:none;
@@ -1741,11 +1747,16 @@ letter-spacing: -0.2px;
   top:0;
   left:50%;
   transform:translate(-50%);
-  z-index:4;
+  z-index:4;  
+  width:100%;
+  height:100vh;
+  background: #fafafa;
 }
 .phone_gallery img{
-height:100vh;
-width:100vw;
+  position:absolute;
+  height:100vh;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 
